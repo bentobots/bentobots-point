@@ -2,14 +2,18 @@
   "name": "bentobots-point",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest src/**/*.test.js",
+    "build": "rm -rf lib && babel -d lib/ src/",
+    "prepublish": "npm run build",
+    "prebuild": "npm run test"
   },
   "keywords": [],
   "author": "John Rees <john@bitsushi.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.23.0",
     "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",

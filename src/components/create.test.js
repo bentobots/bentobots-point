@@ -1,4 +1,4 @@
-import { create } from './create'
+import create from './create'
 
 it('transparently creates a point', () => {
   const result = create({X: () => (1), Y: () => (2), Z: () => (3)})

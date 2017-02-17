@@ -16,4 +16,4 @@ const create = ({ X = () => (1), Y = () => (1), Z = () => (1) }) => {
   return { POINT: (point.length === 1 ? point[0] : point) }
 }
 
-module.exports = { create }
+export default create
